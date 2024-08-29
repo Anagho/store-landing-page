@@ -64,7 +64,7 @@ button:focus, input:focus, button {
   width: 7rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .hero--section {
     gap: 12rem;
   }
