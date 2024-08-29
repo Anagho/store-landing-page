@@ -1,0 +1,136 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+/* CSS VARIABLES */
+:root {
+  --bg--blue: hsl(214, 71%, 29%);
+  --bg--blue-light: hsl(214, 79%, 22%);
+  --bg-card: hsl(22, 31%, 95%);
+}
+
+/* Global Styles */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+button:focus, input:focus, button {
+    outline: none;
+    border: none;
+}
+
+/* Custom styles */
+.bg--blue {
+  background: var(--bg--blue);
+}
+
+.bg--card {
+  background: var(--bg-card);
+}
+
+.bg--blue--light {
+    background: var(--bg--blue-light);
+}
+
+/* Header styling */
+#header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Hero section styling */
+.hero--banner {
+  /* max-width: 400px; */
+}
+.hero--info {
+  max-width: 270px;
+}
+
+.cta--btn button {
+  font-size: 12px;
+  width: 7rem;
+}
+
+@media (min-width: 576px) {
+  .hero--section {
+    gap: 12rem;
+  }
+  .hero--info {
+    max-width: 400px;
+  }
+  .cta--btn button {
+    font-size: 1rem;
+    width: 9rem;
+  }
+
+  .hero--banner {
+    max-width: 350px;
+  }
+  .hero--banner img {
+    object-fit: contain;
+  }
+}
+
+/* Product section styling */
+.card--container {
+  max-width: 300px;
+  margin-inline: 1rem;
+  gap: 1rem;
+  border-radius: 20px;
+  position: relative;
+  border-bottom-right-radius: 55px;
+}
+
+.card--container::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* Negative value of the radius */
+  right: -8px;
+  width: 60px;
+  height: 55px; /* Twice the value of the radius */
+  background-color: #fff; /* Match the card's background color */
+  border-radius: 50%;
+  z-index: 1;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.card--image--box {
+  max-width: 300px;
+}
+
+.product--details {
+    padding-inline: 2rem;
+}
+.cart--box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.cart--box i {
+    font-weight: 700 !important;
+    font-size: 2rem;
+}
